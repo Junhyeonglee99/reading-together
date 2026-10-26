@@ -1,0 +1,152 @@
+[
+  {
+    "round": 1,
+    "title": "노르웨이의 숲",
+    "status": "verified",
+    "image": "assets/spines/S001.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=115614994",
+    "width": 158,
+    "height": 1000
+  },
+  {
+    "round": 2,
+    "title": "종의기원",
+    "status": "verified",
+    "image": "assets/spines/S002.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=74920934",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=74920934",
+    "width": 82,
+    "height": 1000
+  },
+  {
+    "round": 3,
+    "title": "사탄탱고",
+    "status": "verified",
+    "image": "assets/spines/S003.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ISBN=K492532946",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=131332984",
+    "width": 123,
+    "height": 1000
+  },
+  {
+    "round": 4,
+    "title": "다자키 쓰쿠루",
+    "status": "verified",
+    "image": "assets/spines/S004.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=28023107",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=28023107",
+    "width": 123,
+    "height": 1000
+  },
+  {
+    "round": 6,
+    "title": "요즈음 건축 2.0",
+    "status": "verified",
+    "image": "assets/spines/S006.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371537852",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=371537852",
+    "width": 102,
+    "height": 1000
+  },
+  {
+    "round": 7,
+    "title": "여수의 사랑",
+    "status": "verified",
+    "image": "assets/spines/S007.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=173930433",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=173930433",
+    "width": 102,
+    "height": 1000
+  },
+  {
+    "round": 8,
+    "title": "이방인",
+    "status": "verified",
+    "image": "assets/spines/S008.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357919251",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=357919251",
+    "width": 44,
+    "height": 1000
+  },
+  {
+    "round": 9,
+    "title": "프로젝트 헤일메리",
+    "status": "verified",
+    "image": "assets/spines/S009.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=270454373",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=270454373",
+    "width": 163,
+    "height": 1000
+  },
+  {
+    "round": 10,
+    "title": "모순",
+    "status": "verified",
+    "source": "https://www.yes24.com/product/goods/8759796",
+    "image": "assets/spines/S010.jpg",
+    "download_source": "https://image.yes24.com/goods/8759796/SIDE/XL",
+    "width": 103,
+    "height": 1200
+  },
+  {
+    "round": 11,
+    "title": "괴테는 모든 것을 말했다",
+    "status": "verified",
+    "image": "assets/spines/S011.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399902905",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=399902905",
+    "width": 88,
+    "height": 1000
+  },
+  {
+    "round": 12,
+    "title": "양면의 조개껍데기",
+    "status": "verified",
+    "image": "assets/spines/S012.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397023006",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=397023006",
+    "width": 110,
+    "height": 1000
+  },
+  {
+    "round": 13,
+    "title": "룩백",
+    "status": "verified",
+    "image": "assets/spines/S013.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290886787",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=290886787",
+    "width": 49,
+    "height": 1000
+  },
+  {
+    "round": 14,
+    "title": "달리기를 말할 때 내가 하고 싶은 이야기",
+    "status": "verified",
+    "image": "assets/spines/S014.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=3020589",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=3020589",
+    "width": 98,
+    "height": 1000
+  },
+  {
+    "round": 15,
+    "title": "브레이크넥",
+    "status": "verified",
+    "image": "assets/spines/S015.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385069317",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=385069317",
+    "width": 109,
+    "height": 1000
+  },
+  {
+    "round": 16,
+    "title": "어떻게 지내요",
+    "status": "verified",
+    "image": "assets/spines/S016.jpg",
+    "source": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=277973689",
+    "download_source": "https://www.aladin.co.kr/shop/book/wbookspine_down.aspx?itemid=277973689",
+    "width": 70,
+    "height": 900
+  }
+]
