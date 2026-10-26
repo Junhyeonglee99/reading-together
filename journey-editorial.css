@@ -5,3 +5,6 @@
 @media(prefers-reduced-motion:reduce){.journey-cover-image,.journey-arrow{transition:none}}
 @media(max-width:760px){.journey-heading{display:block}.journey-year{display:none}.journey-heading h1{font-size:45px;max-width:none;word-break:keep-all}}
 @media(max-width:360px){.journey-heading h1{font-size:39px}}
+/* Keep the archive as a sequence of visual chapters; details open on tap. */
+.journey-card:not(.journey-next)>.journey-date-row,.journey-card:not(.journey-next)>h3,.journey-card:not(.journey-next)>.journey-card-footer{display:none}.journey-cards{gap:24px}.journey-card:not(.journey-next){line-height:0}.journey-art{line-height:normal}
+@media(max-width:760px){.journey-cards{gap:18px}}
