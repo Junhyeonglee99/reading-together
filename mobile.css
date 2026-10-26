@@ -9,3 +9,6 @@
  dialog{width:calc(100% - 24px);max-width:600px;max-height:calc(100dvh - 36px);padding:52px 22px 30px;border-radius:16px;overscroll-behavior:contain}.dialog-close{position:sticky;display:block;margin:-40px -8px 5px auto;top:0;width:44px;height:44px;z-index:2;border-radius:50%;background:var(--paper)}dialog h2{font-size:24px}dialog p{font-size:13px}.vote-label{font-size:12px;line-height:1.8}.vote-body{min-width:0}.detail-cover{width:84px;max-height:140px;margin:0 0 18px 16px}footer{padding:22px 20px;line-height:1.9;font-size:10px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Keep the full navigation labels readable on phones. */
+@media(max-width:760px){header .brand{font-size:15px}.mobile-nav a,.mobile-nav a:nth-child(2){font-size:9px;letter-spacing:-.5px}.mobile-page-label{font-size:10px}.simple-home h1{font-size:clamp(36px,10vw,66px)}}
