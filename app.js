@@ -15,10 +15,13 @@ function renderBooks(){$('#books').innerHTML=completedMeetings().filter(m=>m.rou
 const order=['준형','가연','효승','소미','유라','성범','승현','채연','규랑'];function renderPersonTabs(){$('#personTabs').innerHTML=order.map(n=>`<button class="${n===person?'active':''}" aria-pressed="${n===person}" data-name="${n}">${n}</button>`).join('');$('#personTabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{person=b.dataset.name;renderPersonTabs();renderRecommendations()})}
 function recommendationRoundLabel(entries,t){
  const records=entries.filter(r=>r.title===t),roundOf=r=>Number(r.round||data.meetings.find(m=>m.id===r.meeting_id)?.round)||null;
- const rounds=[...new Set(records.map(roundOf).filter(Boolean))].sort((a,b)=>a-b);
- const unknown=records.filter(r=>!roundOf(r)).length;
+ const same=t2=>normalizeCoverTitle(t2)===normalizeCoverTitle(t),poster=name(records[0]?.poster_raw);
+ const known=records.map(roundOf).filter(Boolean);
+ data.meetings.forEach(m=>{if(same(title(m))&&name(recommender(m))===poster)known.push(m.round)});
+ data.book_selection_votes.forEach(p=>{if(p.candidates?.some(c=>same(c.title||c.title_raw)&&name(c.recommended_by)===poster)){const n=Number(p.round||data.meetings.find(m=>m.id===p.meeting_id)?.round);if(n)known.push(n)}});
+ const rounds=[...new Set(known)].sort((a,b)=>a-b),unknown=Math.max(0,records.filter(r=>!roundOf(r)).length-rounds.filter(n=>!records.some(r=>roundOf(r)===n)).length);
  const parts=rounds.length?[rounds.join(' · ')+'회차 추천']:[];
- if(unknown)parts.push(unknown===records.length?'추천 회차 미기록':'회차 미기록 '+unknown+'건');
+ if(unknown)parts.push(rounds.length?'회차 미기록 '+unknown+'건':'추천 회차 미기록');
  return parts.join(' / ')||'추천 회차 미기록';
 }
 function renderRecommendations(){const entries=data.recommendation_history.filter(r=>name(r.poster_raw)===person&&!/영화/.test(r.source_type||'')&&!['아바타 3','오늘 밤, 세계에서 이 사랑이 사라진다 해도'].includes(r.title));const titles=[...new Set(entries.map(r=>r.title))];$('#recommendations').innerHTML=titles.map((t,i)=>`<article class="rec"><button class="book-open" data-book="${esc(t)}" aria-label="${esc(t)} 책 이야기 보기">${coverImage(t,'rec-cover')}<span><span class="rec-num">${String(i+1).padStart(2,'0')}</span><b>${esc(t)}</b><small class="rec-round">${esc(recommendationRoundLabel(entries,t))}</small><small>${esc(bookDetail(t)?.genre||'책 이야기')} · 자세히 보기 ↗</small></span></button></article>`).join('')||'<p class="empty">추천 기록이 없어요.</p>';$('#recommendations').querySelectorAll('[data-book]').forEach(b=>b.onclick=()=>openBook(b.dataset.book))}
