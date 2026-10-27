@@ -5,7 +5,7 @@ function closeMenu(){root.classList.remove('menu-open');menu.hidden=true;menuBut
 menuButton.onclick=()=>{const open=!root.classList.contains('menu-open');root.classList.toggle('menu-open',open);menu.hidden=!open;menuButton.textContent=open?'Close':'Menu';menuButton.setAttribute('aria-expanded',String(open))};
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 function setup(){
- const works=data.meetings.filter(m=>m.round!==5).sort((a,b)=>a.round-b.round);let index=Math.max(0,works.findIndex(m=>m.round===8)),all=false;
+ const works=data.meetings.filter(m=>m.round!==5).sort((a,b)=>a.round-b.round);let index=0,all=false;
  const colors=['#c9d4bf','#e7d9c5','#d8aaa0','#d3c5bb','#c8d4d9','#d9c6c8','#b8d9cd','#c2c5de','#dbd3b9','#bfdce2','#c9d5e0','#e2c5ad','#d7cbbc','#d5c4bb','#d9d2c6'];
  const img=document.querySelector('#archiveImage'),grid=document.querySelector('#archiveGrid'),toggle=document.querySelector('#archiveAll');
  function render(){const m=works[index],c=coverInfo(title(m));if(c){img.src=c.embedded||c.url;img.alt=title(m)+' 책 표지'}root.style.setProperty('--archive-bg',colors[index%colors.length]);document.querySelector('#archiveYear').textContent=(m.meeting_date||m.record_date||'2026').slice(0,4);document.querySelector('#archiveRound').textContent=String(m.round).padStart(2,'0');document.querySelector('#archiveTitle').textContent=title(m)+(m.status==='planned'?' · 다음 모임':'');document.querySelector('#archiveCover').setAttribute('aria-label',title(m)+' 모임 기록 열기');toggle.textContent='All ('+works.length+')';toggle.setAttribute('aria-expanded',String(all));grid.hidden=!all;root.classList.toggle('grid-open',all)}
