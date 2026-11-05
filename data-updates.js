@@ -1,0 +1,1 @@
+(()=>{const d=window.BOOKCLUB_DATA;if(!d)return;const m=d.meetings.find(m=>m.round===12);if(m)m.selected_book_recommender='유라';const c=d.covers?.['절창'];if(c){c.url='assets/covers/jeolchang-user.png';delete c.embedded;c.source='사용자 업로드 표지'}})();

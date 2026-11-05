@@ -19,7 +19,6 @@ function setup(){
  window.addEventListener('resize',center);
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{if(entries[0].isIntersecting)start();else stop()},{threshold:.15}).observe(document.querySelector('.shelf-stage'));
  document.querySelectorAll('[data-home-round]').forEach(b=>b.onclick=e=>{e.preventDefault();openMeeting(+b.dataset.homeRound)});
- document.querySelector('#homeMeetings').textContent=completedMeetings().length;document.querySelector('#homeBooks').textContent=completedMeetings().filter(m=>m.round!==5).length;document.querySelector('#homeRecommendations').textContent=recommendationRows().length;
  const sources=document.querySelector('#spineSources');if(sources)sources.innerHTML=works.map(m=>{const s=spines.get(m.round);return `<a href="${esc(s.source)}" target="_blank" rel="noopener noreferrer">${esc(title(m))} · ${s.source.includes('yes24')?'예스24':'알라딘'} ↗</a>`}).join('');
 }
 if(typeof data!=='undefined'&&data)setup();else window.addEventListener('records-ready',setup,{once:true});
