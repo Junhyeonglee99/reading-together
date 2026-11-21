@@ -19,3 +19,9 @@ dialog .dialog-close{background:transparent!important;color:#252a35!important;bo
 #mostRecommended .recommendation-title-group{min-width:0;display:flex;flex-direction:column;gap:4px}
 #mostRecommended .recommendation-title-group b{font-weight:600;overflow-wrap:anywhere}
 #mostRecommended .recommendation-title-group small{display:block;font-size:11px;font-weight:400;color:#697185;line-height:1.5;overflow-wrap:anywhere}
+
+/* Attendance: keep all 16 meeting stamps on a single line */
+#attendancePeople .attendance-stamps{display:grid;grid-template-columns:repeat(16,minmax(0,1fr));gap:2px;min-width:0;width:100%}
+#attendancePeople .attendance-pass{min-width:0}
+#attendancePeople .attendance-stamps .attendance-cell{min-width:0;width:100%;height:10px}
+@media(max-width:760px){#attendancePeople .attendance-pass{grid-template-columns:33px minmax(0,1fr) 30px;gap:7px}#attendancePeople .attendance-stamps{gap:1px}#attendancePeople .attendance-stamps .attendance-cell{height:9px}}
