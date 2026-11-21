@@ -34,7 +34,7 @@ function genreDonut(entries){const palette=['#101010','#b83f32','#77706f','#a69b
 function renderStats(){
  const s=computeStats(),top=[...s.books].sort((a,b)=>b.count-a.count).slice(0,6),shared=[...s.books].sort((a,b)=>b.people.size-a.people.size||b.count-a.count).slice(0,5);
  $('#statsSummary').innerHTML=[[completedMeetings().length,'번의 만남'],[s.unique,'권의 추천 도서'],[s.total,'건의 추천 이력'],[readMeetings().length,'권의 실제 진행 책·만화']].map(([n,t])=>`<div><b>${n}</b><span>${t}</span></div>`).join('');
- $('#mostRecommended').innerHTML=numberList(top,'회',true);
+ $('#mostRecommended').innerHTML='<ol class="number-list">'+top.map((b,i)=>`<li class="has-stat-cover"><span>${String(i+1).padStart(2,'0')}</span>${coverImage(b.title,'stats-book-cover')}<div class="recommendation-title-group"><b>${esc(b.title)}</b><small>${[...b.people].map(esc).join(' · ')}</small></div><strong>${b.count}<em>회</em></strong></li>`).join('')+'</ol>';
  const selectedRows=s.selected.map(([title,count])=>({title,count})),winner=selectedRows[0];
  $('#selectedPeople').innerHTML=(winner?`<div class="winner-card"><div><b>${esc(selectedRows.filter(r=>r.count===winner.count).map(r=>r.title).join(' · '))}</b><small>최다 선정</small></div><strong>${winner.count}</strong></div>`:'')+numberList(selectedRows,'권');
  $('#sharedTaste').innerHTML=shared.map(b=>`<div class="taste-ticket has-stat-cover">${coverImage(b.title,'stats-book-cover')}<b>${esc(b.title)}</b><small>${[...b.people].map(esc).join(' · ')}</small><strong>${b.people.size}<small>명</small></strong></div>`).join('');
